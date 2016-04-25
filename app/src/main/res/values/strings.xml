@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Corurse Calculator</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="number">Number</string>
+    <string name="distance">Distance</string>
+    <string name="reducer">Reducer</string>
+    <string name="positional">Positional</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="view_report">View Report</string>
+    <string name="share">Share</string>
+</resources>

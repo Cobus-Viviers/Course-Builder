@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.List;
+import java.util.concurrent.ThreadFactory;
+
 /**
  * Created by Cobus Viviers on 2016/04/14.
  */
@@ -32,7 +35,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + T_TARGET
-                +"("+C_NO+" INTEGER PRIMARY KEY, "
+                +"("+C_NO+" INTEGER, "
                 +C_DISTANCE + " INTEGER, "
                 +C_REDUCER + " INTEGER, "
                 +C_POSITIONAL + " TEXT);";
@@ -64,16 +67,22 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Target[] targets = new Target[cursor.getCount()];
         if (cursor.moveToFirst()) {
             for (int i = 0; i < targets.length; i++) {
-                int no = cursor.getInt(cursor.getColumnIndex(C_NO));
                 int distance = cursor.getInt(cursor.getColumnIndex(C_DISTANCE));
                 int reducer = cursor.getInt(cursor.getColumnIndex(C_REDUCER));
                 boolean isPositional = "1".equals(cursor.getString(cursor.getColumnIndex(C_POSITIONAL)));
-                targets[i] = new Target(no, distance, reducer, isPositional, _context);
+                targets[i] = new Target(i+1, distance, reducer, isPositional, _context);
                 cursor.moveToNext();
             }
         }
         cursor.close();
 
         return targets;
+    }
+
+    public void deleteTarget(Target target){
+        //TODO THIS COULD BE OPTIMISED SHOULD YOU RUN INTO PERFORMANCE ISSUES
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM "+ T_TARGET +
+                " WHERE (SELECT COUNT(*) FROM " + T_TARGET + " i WHERE i = '"+ (target.getNo()-1)+"');");
     }
 }
