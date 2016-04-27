@@ -22,5 +22,6 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/button_background"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:onClick="ShareCourse"/>
 </LinearLayout>
