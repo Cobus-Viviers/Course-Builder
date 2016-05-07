@@ -11,7 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="cobusviviers.corursecalculator.MainActivity"
     tools:showIn="@layout/app_bar_main"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:animateLayoutChanges="true">
 
 
     <fragment
@@ -20,6 +21,13 @@
         android:id="@+id/mainFragment"
         class="cobusviviers.corursecalculator.FragmentMainList"
         android:layout_weight="10"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewReportFragment"
+        class="cobusviviers.corursecalculator.FragmentViewReport"
+        />
+
 
     <fragment
         android:layout_width="match_parent"
@@ -34,9 +42,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/footerFragmentComplete"
         android:layout_gravity="bottom"
-        class="cobusviviers.corursecalculator.FragmentViewReport"
+        class="cobusviviers.corursecalculator.FragmentViewReportFooter"
         android:layout_weight="1"
         android:layout_marginTop="8dp"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footerFragmentUpdate"
+        android:layout_gravity="bottom"
+        class="cobusviviers.corursecalculator.FragmentUpdateTargets"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"/>
+
 
 
 </LinearLayout>

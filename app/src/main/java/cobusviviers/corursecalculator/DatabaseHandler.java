@@ -83,4 +83,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM "+ T_TARGET +" WHERE " + C_ID + " = "+ target.getiD()+";");
     }
+
+    public void updateTarget(Target target){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(C_POSITIONAL, target.isPositional());
+        values.put(C_REDUCER, target.getReducer());
+        values.put(C_DISTANCE, target.getDistance());
+
+        db.update(T_TARGET, values, C_ID + " = ?", new String[]{Integer.toString(target.getiD())});
+    }
 }
