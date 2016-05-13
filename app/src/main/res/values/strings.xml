@@ -13,4 +13,16 @@
     <string name="view_report">View Report</string>
     <string name="share">Share</string>
     <string name="report">REPORT</string>
+    <string name="course_calculator">Course Calculator</string>
+    <string name="email">Suggestion.CourseCalculator@gmail.com</string>
+    <string name="builder">Builder</string>
+    <string name="Report">Report</string>
+    <string name="contact_me">Contact Me</string>
+    <string name="delete_all">Delete All</string>
+    <string name="expert">Expert:</string>
+    <string name="moderate">Moderate</string>
+    <string name="easy">Easy</string>
+    <string name="reducers">Reducers</string>
+    <string name="positionals">Positionals</string>
+    <string name="about_app">About App</string>
 </resources>
