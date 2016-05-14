@@ -27,6 +27,12 @@
         android:id="@+id/viewReportFragment"
         class="cobusviviers.corursecalculator.FragmentViewReport"
         />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewAboutApp"
+        class="cobusviviers.corursecalculator.FragmentAboutApp"
+        />
 
 
     <fragment

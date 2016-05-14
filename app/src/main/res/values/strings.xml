@@ -25,4 +25,8 @@
     <string name="reducers">Reducers</string>
     <string name="positionals">Positionals</string>
     <string name="about_app">About App</string>
+    <string name="app_details"><![CDATA[This application was developed to aid in building SAFTA regulation courses. The application is an open source, none commercial work and is open for adaptation. Source code available at https://github.com/Cobus-Viviers/SAFTA-Course-Builder.git\n\n
+     Developed by: Cobus Viviers To contact the developer please use the \'Contact Me\' function in the menu for any queries or suggestions.\n\n
+     Icon: The icon is registered under the GNU public licence. You can find the author\'s website at http://www.elegantthemes.com/ and the icon was downloaded from https://www.iconfinder.com\n\n
+      Licence: This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License, or any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.]]></string>
 </resources>
